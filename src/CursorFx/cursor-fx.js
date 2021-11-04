@@ -14,15 +14,10 @@ const SCALE_MIN = 0.5
         if( ! e )
             e = window.event;
 
-        if( e.pageX || e.pageY ) {
+        if( e.clientX || e.clientY ) {
 
-            posx = e.pageX;
-            posy = e.pageY;
-
-        } else if( e.clientX || e.clientY ) {
-
-            posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-            posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+            posx = e.clientX;
+            posy = e.clientY;
 
         }
 
